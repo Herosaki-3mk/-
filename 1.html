@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diabetes Website</title>
+    <link rel="stylesheet" href="1_style.css">
+</head>
+<body>
+
+    <header class="header">
+        <img src="3.png" alt="Logo" class="header-photo">
+        <h1 class="header-title">رفيق العافيه</h1>
+        <a href="profile.html" id="profileLink" style="display: none;">Profile</a>
+    </header>
+      
+
+    <div class="container">
+        <div class="image-section">
+        </div>
+        <div class="title-section">
+            <h1><span>رفيق العافيه</span>, طريقك لحياة أفضل</h1>
+            <a href="login.html">
+                <button>Login</button>
+            </a>
+        </div>
+    </div>
+    <div class="services">
+        <a href="2.html">
+            <div class="card">
+                <h2 class="card-title">مرض السكري</h2>
+                <p class="card-description"></p>
+            </div>
+        </a>
+    </div>
+    <div class="services">
+        <a href="">
+            <div class="card">
+                <h2 class="card-title">ارتفاع ضغط الدم</h2>
+                <p class="card-description"></p>
+            </div>
+        </a>
+    </div>
+    <div class="services">
+        <a href="">
+            <div class="card">
+                <h2 class="card-title">امراض الجهاز التنفسي</h2>
+                <p class="card-description"></p>
+            </div>
+        </a>
+    </div>
+    <div class="services">
+        <a href="">
+            <div class="card">
+                <h2 class="card-title">الصرع والنوبات</h2>
+                <p class="card-description"></p>
+            </div>
+        </a>
+    </div>
+    <div class="services">
+        <a href="">
+            <div class="card">
+                <h2 class="card-title">التهاب المفاصل</h2>
+                <p class="card-description"></p>
+            </div>
+        </a>
+    </div>
+
+    <script>
+        const fullname = sessionStorage.getItem('fullname');
+        const serialNumber = sessionStorage.getItem('serialNumber');
+
+        if (fullname && serialNumber) {
+            const profileLink = document.getElementById('profileLink');
+        if (profileLink) {
+            profileLink.style.display = 'inline';
+            profileLink.innerText = 'Profile';
+            console.log('Profile link updated successfully.');
+        } else {
+            console.error('Profile link element not found.');
+        }
+        } else {
+            console.warn('No user data found in sessionStorage.');
+        }
+
+    </script>
+</body>
+</html>

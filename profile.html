@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile</title>
+  <link rel="stylesheet" href="1_style.css">
+</head>
+<body>
+
+<header class="header">
+  <img src="3.png" alt="Logo" class="header-photo">
+  <h1 class="header-title">رفيق العافيه</h1>
+</header>
+
+<div class="services">
+    <a href="">
+        <div class="card">
+            <h2 id="profileName"></h2>
+        </div>
+    </a>
+</div>
+<div class="services">
+    <a href="">
+        <div class="card">
+            <h2 id="profileSerial"></h2>
+        </div>
+    </a>
+</div>
+
+<script>
+  const fullname = sessionStorage.getItem('fullname');
+  const serialNumber = sessionStorage.getItem('serialNumber');
+
+  if (fullname && serialNumber) {
+    document.getElementById('profileName').innerText = `Name: ${fullname}`;
+    document.getElementById('profileSerial').innerText = `Serial Number: ${serialNumber}`;
+  } else {
+    alert('No user data found. Redirecting to login.');
+    window.location.href = 'login.html';
+  }
+</script>
+
+</body>
+</html>
